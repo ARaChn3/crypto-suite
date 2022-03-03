@@ -25,3 +25,11 @@ import csuite "githib.com/ARaChn3/crypto-suite"
 ```
 
 > Assigning alias: csuite
+
+
+---
+
+### Biblography
+
+Kudos to this article for an amazing explanation of how RSA encryption works:
+https://www.sohamkamani.com/golang/rsa-encryption/
