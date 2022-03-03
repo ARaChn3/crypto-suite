@@ -1,6 +1,4 @@
-<img align="right" src="Crypto Suite Logo.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<br>
-<br>
+![banner](Crypto Suite Banner.png)
 
 # crypto-suite
 
@@ -8,7 +6,6 @@
 
 A full list of all tools and their usage can be found in the [project wiki](https://github.com/ARaChn3/crypto-suite/wiki)
 
-<br><br><br><br><br><br><br><br><br><br>
 
 ## Usage
 
