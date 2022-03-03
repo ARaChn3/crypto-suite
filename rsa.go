@@ -4,12 +4,13 @@ import (
 	"crypto"
 	"crypto/rand"
 	"crypto/rsa"
-    "crypto/sha256"
+	"crypto/sha256"
 )
+
 // RSAEncrypt encrypts plaintext using the RSA (Rivest–Shamir–Adleman)
 // encryption algorithm.
 func RSAEncrypt(plaintext []byte, keySize int) (ciphertext []byte, publicKey *rsa.PublicKey, privateKey *rsa.PrivateKey, err error) {
-    privateKey, err = GenerateKeyPairs(keySize)
+	privateKey, err = GenerateKeyPairs(keySize)
 	if err != nil {
 		return
 	}
@@ -23,7 +24,7 @@ func RSAEncrypt(plaintext []byte, keySize int) (ciphertext []byte, publicKey *rs
 // RSADecrypt decrypts ciphertext using privateKey and returns the plaintext
 // thus obtained.
 func RSADecrypt(ciphertext []byte, privateKey *rsa.PrivateKey) ([]byte, error) {
-    return privateKey.Decrypt(nil, ciphertext, &rsa.OAEPOptions{Hash: crypto.SHA256})
+	return privateKey.Decrypt(nil, ciphertext, &rsa.OAEPOptions{Hash: crypto.SHA256})
 }
 
 // GenerateKeyPairs generates private and public keys for RSA encryption.
