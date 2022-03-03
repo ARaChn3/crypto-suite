@@ -1,4 +1,4 @@
-![banner](./Crypto\ Suite\ Banner.png)
+<img src="Crypto Suite Banner.png" align="center">
 
 # crypto-suite
 
