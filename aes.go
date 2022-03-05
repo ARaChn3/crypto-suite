@@ -13,18 +13,20 @@ var bytes []byte = make([]byte, 16)
 var checkIfInit bool = false
 
 // InitAESBytes initialises the bytes used for encryption in AES encryption.
-func InitAESBytes() {
+func InitAESBytes() error {
 	var err error
 	_, err = rand.Read(bytes)
 	if err != nil {
-		panic(err)
+		return err
 	}
-
 	checkIfInit = true
+
+    return nil
 }
 
-// AESEcnrypt encrypts plaintext using the AES encryption algorithm.
-func AESEcnrypt(plaintext []byte, secret []byte) ([]byte, error) {
+// AESEncrypt encrypts plaintext using the AES encryption algorithm.
+// A valid secret key length is 24 bytes.
+func AESEncrypt(plaintext []byte, secret []byte) ([]byte, error) {
 	if !checkIfInit {
 		panic("Error in Encryption, use InitAESBytes to initialise the bytes first")
 	}
